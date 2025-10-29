@@ -6,6 +6,10 @@
   <title>Luana Ribeiro Beauty</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: 'Poppins', sans-serif;
       background-color: #f8f5f1;
@@ -13,10 +17,33 @@
       margin: 0;
       padding: 0;
       text-align: center;
+      opacity: 0;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        background-color: #fffaf3;
+      }
+      to {
+        opacity: 1;
+        background-color: #f8f5f1;
+      }
     }
 
     header {
       padding: 60px 20px 20px;
+      transform: translateY(20px);
+      animation: slideUp 1.2s ease forwards 0.3s;
+      opacity: 0;
+    }
+
+    @keyframes slideUp {
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
     }
 
     img.profile {
@@ -48,6 +75,14 @@
       gap: 14px;
       margin-top: 35px;
       padding: 0 20px;
+      animation: fadeButtons 1.4s ease forwards 0.7s;
+      opacity: 0;
+    }
+
+    @keyframes fadeButtons {
+      to {
+        opacity: 1;
+      }
     }
 
     a.button {
@@ -75,6 +110,14 @@
       padding: 20px 0 40px;
       font-size: 0.9rem;
       color: #a3916e;
+      animation: fadeFooter 1.6s ease forwards 1.2s;
+      opacity: 0;
+    }
+
+    @keyframes fadeFooter {
+      to {
+        opacity: 1;
+      }
     }
 
     footer a {
