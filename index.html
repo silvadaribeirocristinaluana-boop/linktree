@@ -3,155 +3,111 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Luana Ribeiro Beauty</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <title>luanaribeiro_beauty | Studio Luana Ribeiro</title>
   <style>
-    * {
-      box-sizing: border-box;
+    :root {
+      --bg-color: #f8f7f4;
+      --text-color: #222;
+      --accent-color: #d4af37;
+      --button-bg: #fff;
+      --button-hover: #f0e6cf;
     }
 
     body {
       font-family: 'Poppins', sans-serif;
-      background-color: #f8f5f1;
-      color: #3c2f1e;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
       margin: 0;
-      padding: 0;
-      text-align: center;
-      opacity: 0;
-      animation: fadeIn 1.5s ease forwards;
+      padding: 40px 20px;
     }
 
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        background-color: #fffaf3;
-      }
-      to {
-        opacity: 1;
-        background-color: #f8f5f1;
-      }
-    }
-
-    header {
-      padding: 60px 20px 20px;
-      transform: translateY(20px);
-      animation: slideUp 1.2s ease forwards 0.3s;
-      opacity: 0;
-    }
-
-    @keyframes slideUp {
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
-    }
-
-    img.profile {
-      width: 150px;
-      height: 150px;
+    img {
+      width: 140px;
+      height: 140px;
       border-radius: 50%;
       object-fit: cover;
-      border: 2px solid #d4af37;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      border: 3px solid var(--accent-color);
+      margin-bottom: 20px;
     }
 
     h1 {
       font-size: 1.8rem;
-      margin: 15px 0 5px;
-      color: #3c2f1e;
-      font-weight: 600;
-    }
-
-    p.title {
-      font-size: 1rem;
-      color: #8a7a5c;
       margin: 0;
+      font-weight: 600;
+      color: var(--text-color);
     }
 
-    .buttons {
+    p {
+      font-size: 1rem;
+      text-align: center;
+      max-width: 320px;
+      margin: 15px 0 30px;
+      color: #555;
+    }
+
+    .links {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      gap: 14px;
-      margin-top: 35px;
-      padding: 0 20px;
-      animation: fadeButtons 1.4s ease forwards 0.7s;
-      opacity: 0;
-    }
-
-    @keyframes fadeButtons {
-      to {
-        opacity: 1;
-      }
-    }
-
-    a.button {
-      background-color: #fff;
-      color: #3c2f1e;
-      text-decoration: none;
-      border: 1px solid #d4af37;
-      border-radius: 10px;
-      padding: 12px 20px;
-      width: 90%;
+      width: 100%;
       max-width: 340px;
+      gap: 15px;
+    }
+
+    a {
+      text-decoration: none;
+      padding: 14px 20px;
+      border: 1px solid var(--accent-color);
+      background-color: var(--button-bg);
+      color: var(--text-color);
+      text-align: center;
+      border-radius: 30px;
       font-weight: 500;
       transition: all 0.3s ease;
-      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
     }
 
-    a.button:hover {
-      background-color: #d4af37;
-      color: #fff;
-      transform: translateY(-2px);
+    a:hover {
+      background-color: var(--button-hover);
+      transform: scale(1.02);
     }
 
     footer {
-      margin-top: 60px;
-      padding: 20px 0 40px;
-      font-size: 0.9rem;
-      color: #a3916e;
-      animation: fadeFooter 1.6s ease forwards 1.2s;
-      opacity: 0;
-    }
-
-    @keyframes fadeFooter {
-      to {
-        opacity: 1;
-      }
-    }
-
-    footer a {
-      color: #a3916e;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    footer a:hover {
-      color: #d4af37;
+      margin-top: 40px;
+      font-size: 0.85rem;
+      color: #777;
     }
   </style>
 </head>
 <body>
-  <header>
-    <img src="123.jpg" alt="Luana Ribeiro" class="profile">
-    <h1>Luana Ribeiro</h1>
-    <p class="title">Maquiadora Profissional</p>
-  </header>
+  <img src="123.jpg" alt="Foto de Luana Ribeiro">
+  <h1>@luanaribeiro_beauty</h1>
+  <p>Seja bem-vinda ao Studio Luana Ribeiro!<br>Será um prazer servi-la.<br>Selecione o serviço desejado.</p>
 
-  <section class="buttons">
-    <a class="button" href="https://wa.me/5562991843993?text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20o%20Dia%20de%20Noiva.">Dia de Noiva</a>
+  <div class="links">
+    <a href="https://wa.me/5562991843993?text=Olá,+gostaria+de+mais+informações+sobre+o+curso+de+auto+maquiagem.">
+      Cursos de Auto Maquiagem
+    </a>
+    <a href="https://wa.me/5562991843993?text=Olá,+gostaria+de+mais+informações+sobre+brow+lamination+e+design+de+sobrancelhas.">
+      Brow Lamination / Design de Sobrancelhas
+    </a>
+    <a href="https://wa.me/5562991843993?text=Olá,+gostaria+de+mais+informações+sobre+o+dia+de+noiva.">
+      Dia da Noiva
+    </a>
+    <a href="https://wa.me/5562991843993?text=Olá,+gostaria+de+mais+informações+sobre+maquiagem+social.">
+      Maquiagem Social
+    </a>
+    <a href="https://wa.me/5562991843993?text=Olá,+gostaria+de+mais+informações+sobre+maquiagem+e+penteado.">
+      Maquiagem e Penteado
+    </a>
+    <a href="https://wa.me/5562991843993?text=Olá,+gostaria+de+mais+informações+sobre+maquiagem+e+babyliss.">
+      Maquiagem e Babyliss
+    </a>
+  </div>
 
-    <a class="button" href="https://wa.me/5562991843993?text=Olá,%20gostaria%20de%20agendar%20uma%20Maquiagem%20Social.">Maquiagem Social</a>
-
-    <a class="button" href="https://wa.me/5562991843993?text=Olá,%20gostaria%20de%20agendar%20Maquiagem%20e%20Babyliss.">Maquiagem e Babyliss</a>
-
-    <a class="button" href="https://wa.me/5562991843993?text=Olá,%20gostaria%20de%20agendar%20Maquiagem%20e%20Penteado.">Maquiagem e Penteado</a>
-
-    <a class="button" href="https://wa.me/5562991843993?text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20o%20Curso%20de%20Automaquiagem.">Curso de Automaquiagem</a>
-  </section>
-
-  <footer>
-    <p>© 2025 | <a href="https://instagram.com/luanaribeiro_beauty" target="_blank">@luanaribeiro_beauty</a></p>
-  </footer>
+  <footer>© 2025 Studio Luana Ribeiro</footer>
 </body>
 </html>
